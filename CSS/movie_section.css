@@ -1,0 +1,80 @@
+:root{
+    --font:#000;
+    --back-ground:#fff;
+}
+
+body{
+    width: 100%;
+}
+
+header{
+    background: var(--back-ground);
+    z-index: 2;
+}
+
+main{
+    position: absolute;
+    top:15.5vh;
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+
+.movie_container{
+    overflow: hidden;
+    text-align:center;
+    border-radius: 15px;
+    margin:1rem .5rem .5rem 0;
+    width:30ch; height: 15rem;
+    display:flex;
+    box-shadow: -3px 3px 5px var(--font);
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color:var(--back-ground);
+    text-shadow: 1px 1px 2px var(--font),
+                0px 0px 1px var(--font);
+}
+
+.movie_container:hover{
+    box-shadow:0 0 10px var(--font),
+                0 0 15px var(--font);
+    transition: all .5s ease-in-out;
+    animation: reverse .5s ease-in-out;
+}
+
+.movie_container:hover .content_container{
+    transition: all .5s ease-in-out;
+    z-index: 1;
+}
+
+.content_container{
+    z-index:-1;
+    position:absolute;
+    display:flex;
+    width:30ch; height: 5rem;
+    transform:translateY(100%);
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(0,0,0,.5);
+    border-radius:15px;
+}
+
+.content_container div a{
+    text-shadow: 1px 1px 3px var(--font);
+    color:var(--back-ground);
+}
+
+.content_container div a:hover{
+    text-shadow: -1px 1px 1px var(--font),
+                -1px 1px 20px var(--back-ground),
+                -1px 1px 20px var(--back-ground),
+                -1px 1px 20px var(--back-ground);
+}
+
+.details{
+    pointer-events: none;
+}

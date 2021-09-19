@@ -1,0 +1,54 @@
+:root{
+    --font:#000;
+    --back-ground:#fff;
+}
+
+
+main{
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    transform: translateY(20vh);
+    width:100%;
+    height: 80vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content{
+    background: var(--back-ground);
+    display:flex;
+    justify-content: center;  
+    align-items: center;
+    width:80%;
+    height: 10vh;
+    box-shadow: -3px 1px 5px var(--font);
+}
+
+.content div{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content div:first-child{
+    pointer-events: none;
+}
+
+.content:hover{
+    background: #f2f2f2;
+}
+
+img{
+    width:2rem;
+    height: 2rem;
+}
+
+@media screen and (max-width:768px){
+    img{
+        width:1.65rem;
+        height: 1.65rem;
+    }
+}

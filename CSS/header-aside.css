@@ -1,0 +1,126 @@
+:root{
+    --font:#000;
+    --back-ground:#fff;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    width:100%;
+    height: 100vh;
+}
+
+
+header{
+    z-index:1;
+    display:flex;
+    width:100%;
+    position: fixed;
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--back-ground);
+}
+
+header.outline{
+    box-shadow:0px 0px 5px var(--font);
+}
+
+header h1{
+    pointer-events: none;
+    font-family: cursive;
+    text-align: center;
+}
+
+
+aside.open{
+    left:0;
+}
+
+aside{
+    z-index: 2;
+    position: fixed;
+    box-shadow: 3px 0px 3px var(--font);
+    height:100vh;
+    width:15%;
+    top:0; left:-14%;
+    background: var(--back-ground);
+}
+
+aside li{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    font-family: cursive;
+}
+
+aside li ol{
+    text-align: center;
+    font-weight: bold;
+}
+
+aside li ol a{
+    color:var(--font);
+}
+
+.c-o-button{
+    position: absolute;
+    font-weight:bolder;
+    transform: translateY(50vh);
+    left:90%;
+    width:3rem; height: 3rem;
+    box-shadow: 0px 0px 3px var(--font),
+                3px 0px 5px var(--font);
+    border-radius: 0 99% 99% 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--back-ground);
+    cursor: pointer;
+}
+
+
+.err{
+    position: absolute;
+    display:flex;
+    width:100%;
+    transform:translateY(19vh);
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+    z-index: 3;
+}
+
+
+@media screen and (max-width:768px) {
+    label,aside li ol a{
+        font-size:0.8rem;
+    }
+
+    .err{
+        font-size: 0.8rem;
+        transform: translateY(15vh);
+    }
+
+    header h1{
+        font-size:1.5rem;
+    }
+
+    .c-o.c-o-button{
+        left:80%;
+    }
+
+    aside{
+        width:18%;
+        left:-17%
+    }
+
+}
